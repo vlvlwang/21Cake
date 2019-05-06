@@ -1,5 +1,0 @@
-class BannerLb{
-    constructor(){
-        
-    }
-}

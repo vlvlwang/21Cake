@@ -374,5 +374,9 @@ var tools = {
 	}
 }
 
+define(() => {
+	return tools;
+	
+});
 
 

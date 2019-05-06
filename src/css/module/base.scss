@@ -1,0 +1,16 @@
+// 清除默认样式
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+    padding-inline-start: 0px; 
+    /* 取消libs中定义的padding */
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}

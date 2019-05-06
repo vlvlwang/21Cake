@@ -1,0 +1,48 @@
+.banner{
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+	position: relative;
+}
+.banner .imgs img{
+    min-width: 1200px;
+    height: 480px;
+    margin: 0 auto;
+}
+.banner .imgs li{
+	height: 500px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	opacity: 0;
+	transition: opacity 1s;
+}
+.banner .imgs li.ac{
+	opacity: 1;
+	z-index: 5;
+}
+.banner .pages{
+	position: absolute;
+    left: 46%;
+    margin: auto;
+	bottom:24px;
+	z-index: 6;
+}
+.banner ol li{
+	width: 10px;
+	height: 10px;
+	font-size: 12px;
+	border-radius: 10px;
+	color: #333;
+	background: rgba(255,255,255);
+	margin-left: 12px;
+	float: left;
+	line-height: 15px;
+	text-align: center;
+	cursor: pointer; /*鼠标变小手*/
+}
+.banner ol li.ac{
+	background: rgba(0,0,0,0.5);
+	color: white;
+}

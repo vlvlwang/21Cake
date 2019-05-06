@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+    padding-inline-start: 0px; 
+    /* 取消libs中定义的padding */
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+header{
+    height: 80px;
+}
+.navbar{
+    height: 80px;
+    margin-bottom:0px;
+    border:1px solid #ffffff;
+}
+.navbar li:hover a{
+    background: none;
+    color: #BB9772;
+}
+ .navbar-brand img{
+    width:120px ;
+    height: 44px;
+    line-height: 80px;
+}
+.navbar .collapse{
+    line-height: 80px;
+}
+.navbar-nav li a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #684029;
+}
+.navbar .navbar-right li{
+    margin-left: 5px;
+}
+.navbar .navbar-right .dropdown-menu{
+    min-width: 100px;
+    box-shadow: 0 3px 6px rgba(209, 168, 56, 0.175)
+}
+.navbar .navbar-right .dropdown-menu li{
+    text-align: center;
+}
+.navbar .navbar-right .dropdown-menu li a{
+    padding: 5px 0;
+    color:#BB9772; 
+    font-size: 12px;
+    font-weight: 600;
+}
+.navbar .navbar-right .dropdown-menu li:hover a{
+    color:#724228;
+}
+
+main{
+    width: 1140px;
+}
+main .nav-sort{
+    margin-top: 12px;
+    height: 100px;
+    margin-bottom:80px;
+}
+main .nav-sort .nav-list{
+    padding-top: 15px;
+    width: 1140px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding-inline-start: 0px; */
+}
+main .nav-sort ul li a{
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow:  0 3px 6px rgba(124, 99, 29, 0.175);
+}
+main .nav-sort ul li:nth-child(1) a{
+    background:url(../img/nav-list-01.png) no-repeat;
+}
+main .nav-sort ul li:nth-child(2) a{
+    background:url(../img/nav-list-02.png) no-repeat;
+}
+main .nav-sort ul li:nth-child(3) a{
+    background:url(../img/nav-list-03.png) no-repeat;
+}
+main .nav-sort ul li:nth-child(4) a{
+    background:url(../img/nav-list-04.png) no-repeat;
+}
+main h4{
+    color: #724228;
+    font-size: 24px;
+    font-weight: normal;
+    padding-bottom: 10px
+}
+main h4 span{
+    margin-left: 6px;
+    font-size: 14px;
+    color: #8E5D43;
+}
+main div .list-box{
+    width: 1140px;
+    height: 365px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background: green;
+}
+main .new-product .bg-1 a{
+    display: inline-block;
+    width: 1140px;
+    height: 250px;
+    background: url(../img/xixnpin-bg.jpg) repeat;
+}
+main .fete .bg-2 a{
+    display: inline-block;
+    width: 1140px;
+    height: 250px;
+    background: url(../img/shengri-bg.jpg) repeat;
+}
+main .party .bg-3 a{
+    display: inline-block;
+    width: 1140px;
+    height: 250px;
+    background: url(../img/juhui-bg.jpg) repeat;
+}
+main .pop .bg-4 a{
+    display: inline-block;
+    width: 1140px;
+    height: 250px;
+    background: url(../img/xixnpin-bg.jpg) repeat;
+}
+footer{
+    height: 370px;
+    background: #333;
+}

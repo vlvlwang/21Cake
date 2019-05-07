@@ -1,0 +1,21 @@
+.form-container{
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.form-container input{
+    margin-top: 15px;
+}
+.form-container .col-sm-2{
+    margin-top: 22px;
+}
+.form-container .checkbox input{
+    margin-top: 4px;
+}
+.form-container .checkbox .text-primary{
+    margin-left: 20px;
+}
+.form-container h1{
+    color: rgb(50, 125, 211)
+    line-height: 100px;
+}

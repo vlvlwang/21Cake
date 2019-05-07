@@ -2,9 +2,11 @@
 @import "module/header.scss";
 @import "module/footer.scss";
 @import "banner.scss";
-
 $width: 1140px;
 $height: 250px;
+ul,ol{
+    list-style: none;
+}
 main{
     width: 1140px;
     .nav-sort{

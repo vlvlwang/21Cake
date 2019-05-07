@@ -1,0 +1,19 @@
+header{
+    width: 100%;
+    height: 80px;
+    background: #333;
+}
+
+.login-background{
+    width: 100%;
+    
+    .content-box{
+        width: 1200px;
+        margin: 0 auto;
+
+        .form-login-box{
+            width: 302px;
+            height: 300px;
+        }
+    }
+}

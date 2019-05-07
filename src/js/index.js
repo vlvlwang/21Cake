@@ -1,5 +1,7 @@
 require(["config"], () => {
-    require(["header"], () =>{
+    require(["header","footer"], () =>{
         console.log(header);
+        console.log(footer);
     })
+
 })

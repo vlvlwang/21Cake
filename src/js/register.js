@@ -23,7 +23,11 @@ require(["config"], () => {
                         type : "post",
                         data : {username,password},
                         success : data => {
-                            console.log(data);
+                            //注册成功，跳转登录页
+                            if(data.res_code === 1){
+                                alert(data.res_message + "，即将跳转登录页");
+                                // location.href = "login.html";
+                            }
                         },
                         dataType : "json"
                     })

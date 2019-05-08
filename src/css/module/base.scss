@@ -202,3 +202,14 @@ a{
     color: #fff;
     margin-top: 200px;
 }
+.tag-list{
+    a{
+        display: inline-block;
+        border: 1px solid #D5BFA7;
+        border-radius: 100px;
+        padding: 1px 6px 0 8px;
+        color: #D5BFA7;
+        margin: 8px 4px;
+        font-size: 12px;
+    }
+}

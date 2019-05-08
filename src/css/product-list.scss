@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    height: 80px;
+    background: #cccccc;
+}
+
+$width:1200px;
+$fontColor: #684029;
+.content-box{
+    width: $width;
+    margin: 0 auto;
+
+    .pro-list-content{
+
+        .pro-list-nav{
+            font-size: 13px;
+            margin-top: 25px;
+            margin-bottom: 35px;
+            width: 1200px;
+            border-top: #f2f2f2 solid 1px;
+            border-bottom: #f2f2f2 solid 1px;
+            overflow: hidden;
+            padding: 8px 0;
+
+            .sort-list,.flavor-list{
+                line-height: 50px;
+                overflow: hidden;
+                height: 50px;
+                font-size: 13px;
+                line-height: 50px;
+
+                dt{
+                    color: #9B9B9B;
+                    margin-right: 38px;
+                    float: left;
+                    margin: 0 13px;
+                }
+                dd{
+                    float: left;
+                    margin: 0 13px;
+                    color: $fontColor;
+                }
+            }
+        }
+        .pro-list-box{
+            
+            .pro-list{
+                overflow: hidden;
+
+                li{
+                    width: 264px;
+                    height: 364px;
+
+                    .pro-li-box{
+                        width: 228px;
+                        height: 364px;
+                        position: relative;
+                        margin: 0 auto;
+                        text-align: center;
+                        .goods-list{
+                            display: block;
+                            width: 228px;
+                            height: 292px;
+                            text-align: center;
+                            img{
+                                width: 228px;
+                                height: 246px;
+                                
+                            }
+                            text-decoration: none;
+                            color: #684029;
+                            cursor: pointer;
+                            text-align: center;
+                            h6{
+                                font-size: 13px;
+                                line-height: 20px;
+                                font-weight: normal;
+
+                            }
+                            span{
+                                display: block;
+                                color: #BB9772;
+                                line-height: 18px;
+                                margin-top: 5px;
+                                font-size: 13px;
+                            }
+                        }
+                        .tag-list{
+                            a{
+                                text-decoration: none;
+                                display: inline-block;
+                                border: 1px solid #D5BFA7;
+                                border-radius: 100px;
+                                padding: 1px 6px 0 8px;
+                                color: #D5BFA7;
+                                margin: 8px 4px;
+                                font-size: 12px;
+                            }
+                        }
+                        .pro-list-addcart{
+                            color:$fontColor;
+                            position: absolute;
+                            bottom: 15px;
+                            display: inline-block;
+                            width: 107px;
+                            height: 22px;
+                            left: 60px;
+                            line-height: 24px;
+                            margin-top: 10px;
+                            background: 0 0;
+                            font-size: 13px;
+                            i{
+                                display: inline-block;
+                                vertical-align: -5px;
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 4px;
+                                background: url(/../img/cart-icon+.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                        }
+                        .label{
+                            width: 228px;
+                            height: 26px;
+                            text-align: left;
+                            position: absolute;
+                            left: 0;
+                            top: 15px;
+                            width: 100%;
+
+                            img{
+                                width: 65px;
+                                height: 23px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

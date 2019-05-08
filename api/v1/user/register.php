@@ -1,10 +1,13 @@
 <?php
-    include("./config.php"); // 引入php
+    //后端解决跨域
+    header("Access-Control-Allow-Origin:*"); 
+    include("../config.php"); // 引入php
     // 接收前端传的参数
-    $name = $_POST["name"];
+    $username = $_POST["username"];
     $password = $_POST["password"];
+
     // 添加 书写sql语句
-    $sql = "insert into register (name,password) values ('$name','$password')";
+    $sql = "insert into register (username,password) values ('$username','$password')";
     //执行
     $res = mysql_query($sql);
     //判断

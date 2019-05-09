@@ -1,3 +1,4 @@
+@import "../libs/bootstrap/css/bootstrap.min.css";
 @import "module/base.scss";
 @import "module/footer.scss";
 @import "module/header.scss";
@@ -32,7 +33,7 @@ body{
             position: absolute;
             width: 350px;
             height: 360px;
-            top: 180px;
+            top: 200px;
             right: 0;
             padding: 24px 34px;
             border: 1px solid #E9E9E9;

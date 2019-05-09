@@ -1,3 +1,7 @@
+@import "../libs/bootstrap/css/bootstrap.min.css";
+@import "module/base.scss";
+@import "module/footer.scss";
+@import "module/header.scss";
 *{
     margin: 0;
     padding: 0;
@@ -7,10 +11,6 @@ ol,ul{
 }
 a{
     text-decoration: none;
-}
-header{
-    height: 80px;
-    background: #cccccc;
 }
 
 $width:1200px;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/../css/product-list.css">
 </head>
 <body>
+    <!-- 头部容器 -->
     <header id="header"></header>
     <!-- 中间列表 -->
     <div class="content-box">
@@ -24,46 +25,52 @@
                     <dd>面包</dd>
                 </dl>
                 <dl class="flavor-list">
-                        <dt>口味：</dt>
-                        <dd>全部口味</dd>
-                        <dd>乳脂奶油</dd>
-                        <dd>慕斯</dd>
-                        <dd>乳酪</dd>
-                        <dd>巧克力</dd>
-                        <dd>坚果</dd>
-                        <dd>水果</dd>
-                        <dd>含酒</dd>
-                        <dd>咖啡</dd>
-                        <dd>冰淇淋</dd>
+                    <dt>口味：</dt>
+                    <dd>全部口味</dd>
+                    <dd>乳脂奶油</dd>
+                    <dd>慕斯</dd>
+                    <dd>乳酪</dd>
+                    <dd>巧克力</dd>
+                    <dd>坚果</dd>
+                    <dd>水果</dd>
+                    <dd>含酒</dd>
+                    <dd>咖啡</dd>
+                    <dd>冰淇淋</dd>
                 </dl>
             </div>
-            <div class="pro-list-box">
-                <ul class="pro-list">
-                    <li>
-                        <div class="pro-li-box">
-                            <a class="goods-list" href="">
-                                <img src="/../img/1-1.jpg" alt="">
-                                <h6>百利甜情人</h6>
-                                <span>￥298.00/2.0磅</span>
-                            </a>
-                            <div class="tag-list">
-                                <a href="">情侣 ></a>
-                                <a href="">人气 ></a>
-                                <a href="">生日 ></a>
-                            </div>
-                            <a class="pro-list-addcart" href="">
-                                <i></i>
-                                加入购物车
-                            </a>
-                            <div class="label">
-                                <img src="/../img/xinpin-icon.png" alt="">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <div class="pro-list-box" id="pro-list-box">
+                
             </div>
+            <script type="text/html" id="list-template">
+                <ul class="pro-list">
+                    {{each list item}}
+                        <li>
+                            <div class="pro-li-box">
+                                <a class="goods-list" href="">
+                                    <img src="{{item.img}}" alt="">
+                                    <h6>{{item.title}}</h6>
+                                    <span>￥{{item.price}}</span>
+                                </a>
+                                <div class="tag-list">
+                                    <a href="">情侣 ></a>
+                                    <a href="">人气 ></a>
+                                    <a href="">生日 ></a>
+                                </div>
+                                <a class="pro-list-addcart" href="">
+                                    <i></i>
+                                    加入购物车
+                                </a>
+                                <div class="label">
+                                    <img src="/../img/xinpin-icon.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+            </script>
         </div>
     </div>
+    <!-- 尾部容器 -->
     <footer id="footer"></footer>
     <script src="/libs/requirejs/require.js" data-main="/js/product-list"></script>
 </body>

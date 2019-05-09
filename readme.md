@@ -5,6 +5,11 @@
 
 2.列表页接口
 
+url : http://www.porn.com/api/v1/list/get
+
+method : get
+
+data : {···}
 
 3.注册接口
 

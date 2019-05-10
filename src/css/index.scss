@@ -127,6 +127,10 @@ main{
                         height: 230px;
                         border-radius:10px; 
                         background-color: rgba(224, 223, 220, 0.175);
+                        img:hover{
+                            transform: scale(1.1);
+                            transition:  all 0.5s;
+                        }
                     }
                     a:nth-child(2){
                         h6{

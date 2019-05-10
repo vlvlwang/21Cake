@@ -5,13 +5,25 @@
 
 2.列表页接口
 
-url : http://www.porn.com/api/v1/list/get
+url : http://rap2api.taobao.org/app/mock/168141/
 
 method : get
 
 data : {···}
 
-3.注册接口
+
+3.详情页接口
+
+url : http://rap2api.taobao.org/app/mock/168141/
+
+method : get
+
+query : {id}
+
+data : {···}
+
+
+4.注册接口
 
 url : http://localhost:1021/api/v1/user/regsiter.php
 

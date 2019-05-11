@@ -4,6 +4,7 @@ require(["config"], () => {
         class Detail{
             constructor(){
                 this.init();
+                // this.text();
             }
             //写方法
             //详情页的初始化
@@ -20,21 +21,27 @@ require(["config"], () => {
                         this.render(data);
                     }
                 }),
-                $.get(url.rapBaseUrl + "detailtext/get", {id}, res =>{
-                    if(res.res_code === 1){
+                $.get(url.rapBaseUrl + "detailtext/get", {id}, record =>{
+                    if(record.res_code === 1){
                         //解构赋值，把res_body里的data解构出来 
-                        let {data} = res.res_body;
+                        let {data} = record.res_body;
                         //解构赋值，在data中新增一个id
                         // 当借口变成真实接口时，这句代码不需要
                         data = {...data, id};
-                        this.render(data);
+                        this.renderText(data);
                     }
                 })
+                
             }
+            // 渲染图片
             render(data){
                $("#detail-banner").html(template("detail-template",{data}));
-               $("#detail-text").html(template("detail-text-template",{data}));
                this.zoom();
+
+            }
+            //渲染文本
+            renderText(data){
+                $("#detail-text").html(template("detail-text-template",{data}));
 
             }
             zoom(){

@@ -66,9 +66,6 @@ $fontColor: #684029;
                     margin: 10px 18px;
                     position: relative;
                     overflow: hidden;
-                &:hover h6{
-                    color: #BB9772;
-                }
                     .pro-li-box{
                         width: 228px;
                         height: 364px;
@@ -80,10 +77,12 @@ $fontColor: #684029;
                             width: 228px;
                             height: 292px;
                             text-align: center;
+                            &:hover h6{
+                                color: #BB9772;
+                            }
                             img{
                                 width: 228px;
                                 height: 246px;
-                                
                             }
                             text-decoration: none;
                             color: #684029;
@@ -116,6 +115,7 @@ $fontColor: #684029;
                             }
                         }
                         .pro-list-addcart{
+                            text-decoration: none;
                             color:$fontColor;
                             position: absolute;
                             bottom: 5px;
@@ -127,14 +127,21 @@ $fontColor: #684029;
                             margin-top: 10px;
                             background: 0 0;
                             font-size: 13px;
+                            &:hover{
+                                color: #BB9772;
+                            }
+                            &:hover i{
+                                background: url(/../img/icon.png) -253px -76px no-repeat;
+                                background-size: 310px 120px;
+                            }
                             i{
                                 display: inline-block;
                                 vertical-align: -5px;
                                 width: 20px;
                                 height: 20px;
                                 margin-right: 4px;
-                                background: url(/../img/cart-icon+.png) no-repeat;
-                                background-size: 100% 100%;
+                                background: url(/../img/icon.png) -218px -44px no-repeat;
+                                background-size: 310px 120px;                             
                             }
                         }
                         .label{

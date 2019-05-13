@@ -16,12 +16,12 @@
     </a>
     <!-- 中间内容 -->
     <div class="content-box">
-        <div class="detail-banner" id="detail-banner">
-        </div>
+        <!-- 数据容器 -->
+        <div class="detail-banner" id="detail"></div>
+        <!-- 渲染数据 -->
         <script type="text/html" id="detail-template">
             <div class="detail-img">
                 <img class="mid-img" src="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}" alt="">
-                <!-- <img class="mid-img" src="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}"> -->
             </div>
             <div class="right-list" id="right-list">
                 <ul>
@@ -47,10 +47,7 @@
                     </li>
                 </ul>
              </div>
-        </script>
-        <div class="detail-text" id="detail-text">
-        </div>
-        <script type="text/html" id="detail-text-template">
+        <div class="detail-text" >
             <div class="text-left">
                 <h1>{{data.title}}</h1>
                 <div class="pro-label">
@@ -139,19 +136,20 @@
                         </dl>
                     </div>
                     <div class="buy-cart">
-                        <button class="buy"><a href="/../html/cart.html">立即购买</a></button>
-                        <button class="cart">加入购物车</button>
-                        <div class="addcart">
-                            <p class="add-success">
-                                <i></i>
-                                成功添加购物车
-                            </p>
-                            <a href="/../html/cart.html">查看购物车</a>
-                        </div>
+                        <button class="buy" id="buy"><a href="javascript:;">立即购买</a></button>
+                        <button class="cart" id="cart" data-id="{{data.id}}">加入购物车</button>
                     </div>
                 </article>
             </div>
+            </div>
         </script>
+        <div class="seeCart" id="see-cart">
+                <p class="add-success">
+                    <i></i>
+                    成功添加购物车
+                </p>
+                <a href="/../html/cart.html">查看购物车</a>
+        </div>
         <p class="explain">
             <br>
             退改说明：

@@ -79,6 +79,7 @@ $fontColor: #684029;
             }
         }
         .pro-cart-list{
+            // display: none;
             width: 1200px;
             text-align: left;
             margin-top: 32px;
@@ -302,9 +303,6 @@ $fontColor: #684029;
                                 }
                             }
                         }
-                        // .hr{
-                        //     height: 30px;
-                        // }
                     }
                 }
             }
@@ -364,6 +362,7 @@ $fontColor: #684029;
                 .pro-submit-btn{
                     text-align: right;
                     a{
+                        text-decoration: none;
                         background: #684029;
                         width: 232px;
                         height: 40px;

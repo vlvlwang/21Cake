@@ -19,9 +19,9 @@
                 </p>
             </div>
             <!-- 未添加商品时，购物车页面 -->
-            <div class="addcart-list">
+            <div class="addcart-list" id="list-empty">
                 <img src="/../img/cartempty.png" alt="">
-                <span>您的购物车里还没有商品</span>
+                <span>您的购物车里还没有商品哦</span>
                 <a href="/../html/product-list.html">去购物 >></a>
             </div>
             <!-- 加购商品后，购物车页面 -->
@@ -34,96 +34,57 @@
                     <li>金额</li>
                 </ul>
                 <div class="pro-cart-table">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="javascript:;"><img src="/../img/xinpin-01.png" alt=""></a>
-                                </td>
-                                <td>
-                                    <div>
-                                        <h4><a href="">Teatime 浅草</a></h4>
-                                        <span class="specs">
-                                            规格：
-                                            <span>2.0磅</span>
-                                        </span>
-                                        <span class="give">
-                                            <i></i>
-                                            赠送
-                                            <ins>10</ins>
-                                            套餐具
-                                        </span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="select-birthday">
-                                        <input type="text" value="选择生日牌">
-                                        <ul class="option">
-                                            <li>生日快乐</li>
-                                            <li>节日快乐</li>
-                                            <li>Happy Birthday</li>
-                                            <li>母亲节快乐</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td>￥298.00</td>
-                                <td>
-                                    <div class="pro-price">
-                                        <input type="button" class="cut">
-                                        <input type="text" class="amount" value="1">
-                                        <input type="button" class="add">
-                                    </div>
-                                </td>
-                                <td>￥298.00</td>
-                                <td>
-                                    <a href="#"><i></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="javascript:;"><img src="/../img/juhui-02.png" alt=""></a>
-                                </td>
-                                <td>
-                                    <div>
-                                        <h4><a href="">Teatime 浅草</a></h4>
-                                        <span class="specs">
-                                            规格：
-                                            <span>2.0磅</span>
-                                        </span>
-                                        <span class="give">
-                                            <i></i>
-                                            赠送
-                                            <ins>10</ins>
-                                            套餐具
-                                        </span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="select-birthday">
-                                        <input type="text" value="选择生日牌">
-                                        <ul class="option">
-                                            <li>生日快乐</li>
-                                            <li>节日快乐</li>
-                                            <li>Happy Birthday</li>
-                                            <li>母亲节快乐</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td>￥298.00</td>
-                                <td>
-                                    <div class="pro-price">
-                                        <input type="button" class="cut">
-                                        <input type="text" class="amount" value="1">
-                                        <input type="button" class="add">
-                                    </div>
-                                </td>
-                                <td>￥298.00</td>
-                                <td>
-                                    <a href="#"><i></i></a>
-                                </td>
-                            </tr>
-                            <tr class="hr"></tr>
-                        </tbody>
+                    <table id="list-container">
+                       
+                        <script type="text/html" id="cart-template">
+                            <tbody >
+                                {{each cart item}}
+                                <tr data-id="{{item.id}}">
+                                    <td>
+                                        <a href="javascript:;"><img src="{{item.img}}" alt=""></a>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <h4><a href="">{{item.title}}</a></h4>
+                                            <span class="specs">
+                                                规格：
+                                                <span>2.0磅</span>
+                                            </span>
+                                            <span class="give">
+                                                <i></i>
+                                                赠送
+                                                <ins>10</ins>
+                                                套餐具
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="select-birthday">
+                                            <input type="text" value="选择生日牌">
+                                            <ul class="option">
+                                                <li>生日快乐</li>
+                                                <li>节日快乐</li>
+                                                <li>Happy Birthday</li>
+                                                <li>母亲节快乐</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>￥{{item.price}}</td>
+                                    <td>
+                                        <div class="pro-price">
+                                            <input type="button" class="cut">
+                                            <input type="text" class="amount" value="{{item.num}}">
+                                            <input type="button" class="add">
+                                        </div>
+                                    </td>
+                                    <td>￥{{item.price*item.num}}</td>
+                                    <td>
+                                        <a href="#"><i></i></a>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </script>
                     </table>
                 </div>
                 <div class="settlement">    
@@ -132,13 +93,13 @@
                         全部清空
                     </a>
                     <ul>
-                        <li>商品金额：¥ 596.00</li>
+                        <li>商品金额：¥ {{item.price*item.num}}</li>
                         <li>活动优惠：¥ 0.00</li>
                     </ul>
                     <p>
                         <span class="pro-total">
                             合计：￥
-                            <span>596.00</span>
+                            <span>{{item.price*item.num}}</span>
                         </span>
                     </p>
                     <div class="pro-submit-btn">

@@ -28,7 +28,8 @@ require(["config"], () => {
             }
 
         }
-        new List();
+        new List();  
+        
     })
 
 })

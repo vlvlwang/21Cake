@@ -120,6 +120,9 @@ main{
                 li{
                     width: 263px;
                     height: 365px;
+                    a{
+                        text-decoration: none;
+                    }
                     // background: #f1eeed;
                     a:first-child {
                         display: inline-block;
@@ -127,6 +130,7 @@ main{
                         height: 230px;
                         border-radius:10px; 
                         background-color: rgba(224, 223, 220, 0.175);
+                        overflow: hidden;
                         img:hover{
                             transform: scale(1.1);
                             transition:  all 0.5s;
@@ -134,6 +138,7 @@ main{
                     }
                     a:nth-child(2){
                         h6{
+                            
                             font-size: 16px;
                             margin-top: 10px;
                             margin-bottom: 0px;

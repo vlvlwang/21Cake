@@ -47,97 +47,9 @@
         <div class="new-bg">
           <a href="#"></a>
         </div>
-        <div class="list-box">
+        <div class="list-box" >
       <!-- 商品列表 -->
-          <ul>
-            <li>
-              <a href=""><img src="img/xinpin-01.png" alt=""></a>
-              <a href="">
-                <h6>百利甜情人</h6>
-              </a>
-              <a href="">
-                <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
-              </a>
-              <div class="tag-list">
-                <span></span>
-                <a href="">情侣 ></a>
-                <a href="">人气 ></a>
-                <a href="">生日 ></a>
-                <a href="">结婚 ></a>
-              </div>
-              <div class="cart-info">
-                <span>￥298.00/2.0磅</span>
-                <a class="add-cart" href="/html/cart.html">加入购物车</a>
-              </div>
-              <div></div>
-              <div></div>
-            </li>
-            <li>
-                <a href=""><img src="img/xinpin-02.png" alt=""></a>
-                <a href="">
-                  <h6>百利甜情人</h6>
-                </a>
-                <a href="">
-                  <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
-                </a>
-                <div class="tag-list">
-                  <span></span>
-                  <a href="">情侣 ></a>
-                  <a href="">人气 ></a>
-                  <a href="">生日 ></a>
-                  <a href="">结婚 ></a>
-                </div>
-                <div class="cart-info">
-                  <span>￥298.00/2.0磅</span>
-                  <a class="add-cart" href="">加入购物车</a>
-                </div>
-                <div></div>
-                <div></div>
-            </li>
-            <li>
-                <a href=""><img src="img/xinpin-03.png" alt=""></a>
-                <a href="">
-                  <h6>百利甜情人</h6>
-                </a>
-                <a href="">
-                  <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
-                </a>
-                <div class="tag-list">
-                  <span></span>
-                  <a href="">情侣 ></a>
-                  <a href="">人气 ></a>
-                  <a href="">生日 ></a>
-                  <a href="">结婚 ></a>
-                </div>
-                <div class="cart-info">
-                  <span>￥298.00/2.0磅</span>
-                  <a class="add-cart" href="">加入购物车</a>
-                </div>
-                <div></div>
-                <div></div>
-            </li>
-            <li>
-                  <a href=""><img src="img/xinpin-04.png" alt=""></a>
-                  <a href="">
-                    <h6>百利甜情人</h6>
-                  </a>
-                  <a href="">
-                    <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
-                  </a>
-                  <div class="tag-list">
-                    <span></span>
-                    <a href="">情侣 ></a>
-                    <a href="">人气 ></a>
-                    <a href="">生日 ></a>
-                    <a href="">结婚 ></a>
-                  </div>
-                  <div class="cart-info">
-                    <span>￥298.00/2.0磅</span>
-                    <a class="add-cart" href="">加入购物车</a>
-                  </div>
-                  <div></div>
-                  <div></div>
-            </li>
+          <ul id="pro-ul">
           </ul>
         </div>
       </div>
@@ -147,37 +59,53 @@
         <div class="fete-bg">
           <a href="#"></a>
         </div>
+        <div class="list-box" id="list-box">
+      <!-- 商品列表 -->
+        </div>
+        <script type="text/html" id="list-template"> 
+          <ul>
+            {{each list item}}
+              <li>
+                  <a href="/html/detail.html"><img src="{{item.img}}" alt=""></a>
+                  <a href="/html/detail.html">
+                    <h6>{{item.title}}</h6>
+                  </a>
+                  <a href="/html/detail.html">
+                    <p>{{item.text}}</p>
+                  </a>
+                  <div class="tag-list">
+                    <span></span>
+                    <a href="">情侣 ></a>
+                    <a href="">人气 ></a>
+                    <a href="">生日 ></a>
+                    <a href="">结婚 ></a>
+                  </div>
+                  <div class="cart-info">
+                    <span>￥{{item.price}}/2.0磅</span>
+                    <a class="add-cart" href="#pro-size">加入购物车</a>
+                  </div>
+                  <div id="pro-size"></div>
+                  <div id="add-pro"></div>
+              </li>
+              {{/each}}
+          </ul>
+        </script>
+      </div>
+      <!-- 聚会 -->
+      <div class="product-list">
+        <h4>聚会<span>/ 专区</span></h4>
+        <div class="party-bg">
+          <a href="#"></a>
+        </div>
         <div class="list-box">
       <!-- 商品列表 -->
           <ul>
               <li>
-                <a href=""><img src="img/shengri-01.png" alt=""></a>
-                <a href="">
-                  <h6>百利甜情人</h6>
-                </a>
-                <a href="">
-                  <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
-                </a>
-                <div class="tag-list">
-                  <span></span>
-                  <a href="">情侣 ></a>
-                  <a href="">人气 ></a>
-                  <a href="">生日 ></a>
-                  <a href="">结婚 ></a>
-                </div>
-                <div class="cart-info">
-                  <span>￥298.00/2.0磅</span>
-                  <a class="add-cart" href="">加入购物车</a>
-                </div>
-                <div></div>
-                <div></div>
-              </li>
-              <li>
-                  <a href=""><img src="img/shengri-02.png" alt=""></a>
-                  <a href="">
+                  <a href="/html/detail.html"><img src="/img/juhui-01.png" alt=""></a>
+                  <a href="/html/detail.html">
                     <h6>百利甜情人</h6>
                   </a>
-                  <a href="">
+                  <a href="/html/detail.html">
                     <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
                   </a>
                   <div class="tag-list">
@@ -193,35 +121,13 @@
                   </div>
                   <div></div>
                   <div></div>
-              </li>
-              <li>
-                  <a href=""><img src="img/shengri-03.png" alt=""></a>
-                  <a href="">
-                    <h6>百利甜情人</h6>
-                  </a>
-                  <a href="">
-                    <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
-                  </a>
-                  <div class="tag-list">
-                    <span></span>
-                    <a href="">情侣 ></a>
-                    <a href="">人气 ></a>
-                    <a href="">生日 ></a>
-                    <a href="">结婚 ></a>
-                  </div>
-                  <div class="cart-info">
-                    <span>￥298.00/2.0磅</span>
-                    <a class="add-cart" href="">加入购物车</a>
-                  </div>
-                  <div></div>
-                  <div></div>
-              </li>
-              <li>
-                    <a href=""><img src="img/shengri-04.png" alt=""></a>
-                    <a href="">
+                </li>
+                <li>
+                    <a href="/html/detail.html"><img src="/img/juhui-02.png" alt=""></a>
+                    <a href="/html/detail.html">
                       <h6>百利甜情人</h6>
                     </a>
-                    <a href="">
+                    <a href="/html/detail.html">
                       <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
                     </a>
                     <div class="tag-list">
@@ -237,7 +143,50 @@
                     </div>
                     <div></div>
                     <div></div>
-              </li>
+                  </li>
+              <li>
+                  <a href="/html/detail.html"><img src="/img/juhui-03.png" alt=""></a>
+                  <a href="/html/detail.html">
+                    <h6>百利甜情人</h6>
+                  </a>
+                  <a href="/html/detail.html">
+                    <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
+                  </a>
+                  <div class="tag-list">
+                    <span></span>
+                    <a href="">情侣 ></a>
+                    <a href="">人气 ></a>
+                    <a href="">生日 ></a>
+                    <a href="">结婚 ></a>
+                  </div>
+                  <div class="cart-info">
+                    <span>￥298.00/2.0磅</span>
+                    <a class="add-cart" href="">加入购物车</a>
+                  </div>
+                  
+                </li>
+              <li>
+                  <a href="/html/detail.html"><img src="/img/juhui-04.png" alt=""></a>
+                  <a href="/html/detail.html">
+                    <h6>百利甜情人</h6>
+                  </a>
+                  <a href="/html/detail.html">
+                    <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
+                  </a>
+                  <div class="tag-list">
+                    <span></span>
+                    <a href="">情侣 ></a>
+                    <a href="">人气 ></a>
+                    <a href="">生日 ></a>
+                    <a href="">结婚 ></a>
+                  </div>
+                  <div class="cart-info">
+                    <span>￥298.00/2.0磅</span>
+                    <a class="add-cart" href="">加入购物车</a>
+                  </div>
+                  <div></div>
+                  <div></div>
+                </li>
           </ul>
         </div>
       </div>
@@ -251,11 +200,11 @@
       <!-- 商品列表 -->
           <ul>
               <li>
-                <a href=""><img src="img/shengri-01.png" alt=""></a>
-                <a href="">
+                <a href="/html/detail.html"><img src="img/shengri-01.png" alt=""></a>
+                <a href="/html/detail.html">
                   <h6>百利甜情人</h6>
                 </a>
-                <a href="">
+                <a href="/html/detail.html">
                   <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
                 </a>
                 <div class="tag-list">
@@ -273,11 +222,11 @@
                 <div></div>
               </li>
               <li>
-                  <a href=""><img src="img/shengri-02.png" alt=""></a>
-                  <a href="">
+                  <a href="/html/detail.html"><img src="img/shengri-02.png" alt=""></a>
+                  <a href="/html/detail.html">
                     <h6>百利甜情人</h6>
                   </a>
-                  <a href="">
+                  <a href="/html/detail.html">
                     <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
                   </a>
                   <div class="tag-list">
@@ -295,11 +244,11 @@
                   <div></div>
               </li>
               <li>
-                  <a href=""><img src="img/shengri-03.png" alt=""></a>
-                  <a href="">
+                  <a href="/html/detail.html"><img src="img/shengri-03.png" alt=""></a>
+                  <a href="/html/detail.html">
                     <h6>百利甜情人</h6>
                   </a>
-                  <a href="">
+                  <a href="/html/detail.html">
                     <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
                   </a>
                   <div class="tag-list">
@@ -317,11 +266,11 @@
                   <div></div>
               </li>
               <li>
-                    <a href=""><img src="img/shengri-04.png" alt=""></a>
-                    <a href="">
+                    <a href="/html/detail.html"><img src="img/shengri-04.png" alt=""></a>
+                    <a href="/html/detail.html">
                       <h6>百利甜情人</h6>
                     </a>
-                    <a href="">
+                    <a href="/html/detail.html">
                       <p>新切的水果和刚折的玫瑰，甜美、渐浓</p>
                     </a>
                     <div class="tag-list">
@@ -345,5 +294,6 @@
     </main>
     <footer id="footer" class="rela"></footer>
     <script src="/libs/requirejs/require.js" data-main="/js/index"></script>
+
 </body>
 </html>

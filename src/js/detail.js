@@ -20,16 +20,6 @@ require(["config"], () => {
                         data = {...data, id};
                         this.render(data);
                     }
-                }),
-                $.get(url.rapBaseUrl + "detailtext/get", {id}, record =>{
-                    if(record.res_code === 1){
-                        //解构赋值，把res_body里的data解构出来 
-                        let {data} = record.res_body;
-                        //解构赋值，在data中新增一个id
-                        // 当借口变成真实接口时，这句代码不需要
-                        data = {...data, id};
-                        this.renderText(data);
-                    }
                 })
                 
             }

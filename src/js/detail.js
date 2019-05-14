@@ -30,7 +30,6 @@ require(["config"], () => {
             render(data){
                $("#detail").html(template("detail-template",{data}));
                this.zoom();
-
             }
            
             //加购物车

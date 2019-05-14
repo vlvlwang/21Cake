@@ -4,7 +4,6 @@ require(["config"], () => {
         // console.log(footer);
         class Cart{
             constructor(){
-                this.empty = $("#list-empty");
                 this.init();
             }
             init(){

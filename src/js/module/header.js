@@ -11,6 +11,7 @@ define(["jquery", "cookie"], $ => {
         this.container = $("#header");
         this.load().then(() =>{
             this.isLogin();
+            this.calcCartNum();
         });
     }
     //对象合并
@@ -49,9 +50,33 @@ define(["jquery", "cookie"], $ => {
                     $.removeCookie("username", {path : "/"});
                     this.loginBtn.show(); 
                     this.afterLogin.hide();
+                    
                 }
             })
 
+        },
+
+        calcCartNum(){
+            let cart = localStorage.getItem("cart");
+            // console.log(cart);
+            let num = 0;
+            //判断是否存在加购商品数量
+            if(cart){
+                //存在，就计算总数
+                // $("#cart-num").show();
+                cart = JSON.parse(cart);
+                //计算总数量
+                num = cart.reduce((n,shop) =>{
+                    n += shop.num;
+                    return n;
+                }, 0);
+
+            }
+            //不存在就隐藏
+            $("#cart-num").html(num);
+            // if(num === 0){
+            //     $("#cart-num").hide();
+            // }
         }
     })
         // 头部的js交互在这里书写

@@ -105,6 +105,23 @@ header{
     height: 70px;
     background: url(../../img/cart-icon.png) no-repeat 10px 30px;
     background-size: 18px 18px;
+    &+span{
+        position: absolute;
+        display: block;
+        height: 12px;
+        padding: 0 1px;
+        min-width: 12px;
+        top: 21px;
+        left: 5px;
+        background: #ba9978;
+        text-align: center;
+        line-height: 12px;
+        color: #fff;
+        margin-left: 18px;
+        margin-top: 3px;
+        font-size: 10px;
+        border-radius: 10px;
+    }
 }
 .navbar .navbar-right .after-login{
     display: none;

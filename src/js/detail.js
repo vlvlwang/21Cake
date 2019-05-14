@@ -1,5 +1,5 @@
 require(["config"], () => {
-    require(["url", "template", "header","footer","zoom"], (url,template) =>{
+    require(["url", "template", "header","footer","zoom","fly"], (url,template,header) =>{
 
         class Detail{
             constructor(){
@@ -32,11 +32,12 @@ require(["config"], () => {
                this.zoom();
             }
            
-            //加购物车
+            //加购物车 事件委托
             addCart(){
                 // 立即购买 + 直接跳转购物车页面
                 $("#detail").on("click","#buy",() =>{
                     let cart = localStorage.getItem("cart");
+                    console.log(cart);
                     if(cart){
                         cart = JSON.parse(cart);
                         let index = -1;  //-1无意义，index是来接收值的
@@ -57,7 +58,25 @@ require(["config"], () => {
                     location.href="/../html/cart.html";
                 })
                 // 加入购物车，点击“查看购物车”跳转页面
-                $("#detail").on("click","#cart",() =>{
+                $("#detail").on("click","#cart", e  =>{
+                        // 完成抛物线加购物车动画
+                    $(`<img src='${this.data.imgs[0]}' style='width:15px;height:15px;z-index:1000000000'>`).fly({
+                        //起始位置
+                        start: {
+                            left:e.clientX,
+                            top: e.clientY
+                        },
+                        //终止位置
+                        end: {
+                            left:$("#cart-num").offset().left,
+                            top :$("#cart-num").position().top
+                        },
+                        //清除抛物体
+                        onEnd: function(){
+                            this.destroy();
+                            header.calcCartNum(); //调用一次计算数量的方法
+                        }
+                    });
                     this.seeCart.fadeIn();
                     setTimeout(() => {
                     this.seeCart.fadeOut(); 

@@ -26,7 +26,7 @@
             </div>
             <!-- 加购商品后，购物车页面 -->
             <div class="pro-cart-list">
-                <ul class="pro-cart-head">
+                <ul class="pro-cart-head" id="pro-cart-head">
                     <li>商品</li>
                     <li>生日牌</li>
                     <li>单价</li>
@@ -37,7 +37,7 @@
                     <table id="list-container">
                        
                         <script type="text/html" id="cart-template">
-                            <tbody >
+                            <tbody id="tbody">
                                 {{each cart item}}
                                 <tr data-id="{{item.id}}">
                                     <td>
@@ -60,8 +60,8 @@
                                     </td>
                                     <td>
                                         <div class="select-birthday">
-                                            <input type="text" value="选择生日牌">
-                                            <ul class="option">
+                                            <input type="text" placeholder="选择生日牌" id="select-card" value="" >
+                                            <ul class="option" id="option">
                                                 <li>生日快乐</li>
                                                 <li>节日快乐</li>
                                                 <li>Happy Birthday</li>
@@ -77,9 +77,9 @@
                                             <input type="button" class="add">
                                         </div>
                                     </td>
-                                    <td>￥{{item.price*item.num}}</td>
+                                    <td id="allMoney">￥{{item.price*item.num}}</td>
                                     <td>
-                                        <a href="#"><i></i></a>
+                                        <a href="javascript:;"><i id="remove"></i></a>
                                     </td>
                                 </tr>
                                 {{/each}}
@@ -88,18 +88,18 @@
                     </table>
                 </div>
                 <div class="settlement">    
-                    <a href="#" class="del">
+                    <a href="javascript:;" class="del" id="detail">
                         <i></i>
                         全部清空
                     </a>
                     <ul>
-                        <li>商品金额：¥ {{item.price*item.num}}</li>
+                        <li>商品金额：<span id="moneyContainer"></span></li>
                         <li>活动优惠：¥ 0.00</li>
                     </ul>
                     <p>
                         <span class="pro-total">
                             合计：￥
-                            <span>{{item.price*item.num}}</span>
+                            <span id="moneyContainer"></span>
                         </span>
                     </p>
                     <div class="pro-submit-btn">
@@ -111,7 +111,7 @@
                 <h2>商品推荐</h2>
                 <ul>
                     <li>
-                        <a href="/../html/detail.html">
+                        <a href="/../html/product-list.html">
                             <img src="/../img/recommend-list.jpg" alt="">
                         </a>
                     </li>

@@ -1,6 +1,5 @@
 require(["config"], () => {
-    require(["url", "template","header","footer"], (url, template) =>{
-        
+    require(["url", "template","swiper","header","footer"], (url, template,Swiper) =>{
         class Index{
             constructor(){
                 this.ul = document.querySelector("#pro-ul");
@@ -10,9 +9,46 @@ require(["config"], () => {
                     {"img" : "../img/xinpin-03.png", "name" : "榴莲飘飘", "price" : 298.00, "text" : "时候到了，榴莲飘飘"},
                     {"img" : "../img/xinpin-04.png", "name" : "可可岛", "price" : 458.00, "text" : "可可 是一种甜蜜的红色果浆"}
                 ];
+                this.banner();
                 this.render();
                 this.init();
+                
             }
+            //轮播图
+            banner(){
+                var mySwiper = new Swiper ('.swiper-container', {
+                    // direction: '', // 默认水平切换
+                    loop: true, // 循环模式选项
+                    
+                    effect : 'fade',
+                    fadeEffect: {
+                      crossFade: true,
+                    },
+
+                    autoplay:true,//等同于以下设置,自动轮播
+                    autoplay: {
+                        delay: 3000,
+                        stopOnLastSlide: false,
+                        disableOnInteraction: false,
+                        },
+
+                    // 如果需要分页器
+                    pagination: {
+                      el: '.swiper-pagination',
+                      clickable :true,
+                      bulletElement : 'customs',
+                    },
+                    // 如果需要前进后退按钮
+                    // navigation: {
+                    //   nextEl: '.swiper-button-next',
+                    //   prevEl: '.swiper-button-prev',
+                      
+                    // },
+                    
+                  })  
+            }
+
+            // 接收json数据，渲染
             render(){
                 let html = "";
 		        this.json.forEach((item, index) => {
@@ -34,7 +70,7 @@ require(["config"], () => {
                         </div>
                         <div class="cart-info">
                             <span>￥${item.price}/2.0磅</span>
-                            <a class="add-cart" href="/html/cart.html">加入购物车</a>
+                            <a class="add-cart" href="javascript:;">加入购物车</a>
                         </div>
                         <div></div>
                         <div></div>

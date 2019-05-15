@@ -1,20 +1,14 @@
-.banner{
+.swiper-container{
 	margin-top: 80px;
     width: 100%;
     height: 520px;
     overflow: hidden;
 	position: relative;
-	.imgs{
-		li{
-			position: absolute;
-			left: 0;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			z-index: 0;
-			opacity: 0;
-			transition: opacity 1s;
+	.swiper-wrapper{
+		width: 100%;
+		height: 520px;	
+		div{
+			
 			a{
 				display: inline-block;
 				width: 100%;
@@ -27,36 +21,28 @@
 			}
 			
 		}
-		.ac{
-			opacity: 1;
-			z-index: 5;
-		}
 	}
-	.pages{
-		position: absolute;
-		left: 46%;
-		margin: auto;
-		bottom:24px;
-		z-index: 6;
-
-		li{
-			width: 10px;
-			height: 10px;
+	.swiper-pagination-bullets{
+		left: 48%;
+	}
+	.swiper-pagination-bullet{
+		width: 10px !important;
+		height: 10px !important;
+	}
+	customs{
+			width: 8px;
+			height: 8px;
 			font-size: 12px;
 			border-radius: 10px;
-			color: #333;
-			background:#fff;
+			background:rgba(0,0,0,0.6);
 			margin-left: 12px;
 			float: left;
 			line-height: 15px;
 			text-align: center;
 			cursor: pointer; /*鼠标变小手*/
 		}
-		.ac{
-			background: rgba(0,0,0,0.5);
-			color: white;
+		.swiper-button-prev,.swiper-button-next{
+			color: rgba(0,0,0,0.4);
 		}
 	}
-	
-}
 

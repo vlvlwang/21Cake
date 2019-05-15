@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>21Cake</title>
+    <link rel="stylesheet" href="libs/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -15,21 +16,21 @@
     <header id="header"></header>
 
     <!-- banner 轮播图 -->
-    <div class="banner">
-        <ul class="imgs">
-          <li class="ac"><a href="javascript:;"><img src="/img/banner-1.jpg" alt=""></a></li>
-          <li><a href="javascript:;"><img src="/img/banner-2.jpg" alt=""></a></li>
-          <li><a href="javascript:;"><img src="/img/banner-3.jpg" alt=""></a></li>
-          <li><a href="javascript:;"><img src="/img/banner-4.jpg" alt=""></a></li>
-          <li><a href="javascript:;"><img src="/img/banner-5.jpg" alt=""></a></li>
-        </ul>
-        <ol class="pages">
-          <li class="ac"></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ol>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="/html/detail.html"><img src="/img/banner-1.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="/html/detail.html"><img src="/img/banner-2.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="/html/detail.html"><img src="/img/banner-3.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="/html/detail.html"><img src="/img/banner-4.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="/html/detail.html"><img src="/img/banner-5.jpg" alt=""></a></div>
+        </div>
+        <!-- 分页 -->
+        <div class="swiper-pagination"></div>
+        <!-- 前后切换 -->
+      <!-- 
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> 
+      -->
     </div>
     <!-- 主题内容 -->
     <main class="container">
@@ -84,6 +85,8 @@
                     <span>￥{{item.price}}/2.0磅</span>
                     <a class="add-cart" href="#pro-size">加入购物车</a>
                   </div>
+                  <div id="pro-size"></div>
+                  <div id="add-pro"></div>
               </li>
               {{/each}}
           </ul>

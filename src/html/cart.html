@@ -24,6 +24,7 @@
                 <span>您的购物车里还没有商品哦</span>
                 <a href="/../html/product-list.html">去购物 >></a>
             </div>
+
             <!-- 加购商品后，购物车页面 -->
             <div class="pro-cart-list">
                 <ul class="pro-cart-head" id="pro-cart-head">
@@ -45,7 +46,7 @@
                                     </td>
                                     <td>
                                         <div>
-                                            <h4><a href="">{{item.title}}</a></h4>
+                                            <h4><a href="javascript:;">{{item.title}}</a></h4>
                                             <span class="specs">
                                                 规格：
                                                 <span>2.0磅</span>
@@ -69,15 +70,15 @@
                                             </ul>
                                         </div>
                                     </td>
-                                    <td>￥{{item.price}}</td>
+                                    <td id="pro-price">￥<span id="price">{{item.price}}</span></td>
                                     <td>
-                                        <div class="pro-price">
-                                            <input type="button" class="cut">
-                                            <input type="text" class="amount" value="{{item.num}}">
-                                            <input type="button" class="add">
+                                        <div class="pro-price" id="proNum">
+                                            <input type="button" class="cut" id="cut">
+                                            <input type="text" class="amount" value="{{item.num}}" id="amount">
+                                            <input type="button" class="add" id="add">
                                         </div>
                                     </td>
-                                    <td id="allMoney">￥{{item.price*item.num}}</td>
+                                    <td id="allMoney">￥<span id="all">{{item.price*item.num}}</span>.00</td>
                                     <td>
                                         <a href="javascript:;"><i id="remove"></i></a>
                                     </td>
@@ -93,13 +94,13 @@
                         全部清空
                     </a>
                     <ul>
-                        <li>商品金额：<span id="moneyContainer"></span></li>
+                        <li>商品金额：￥<span id="moneyContainer"></span></li>
                         <li>活动优惠：¥ 0.00</li>
                     </ul>
                     <p>
                         <span class="pro-total">
                             合计：￥
-                            <span id="moneyContainer"></span>
+                            <span id="calcAllMoney"></span>
                         </span>
                     </p>
                     <div class="pro-submit-btn">

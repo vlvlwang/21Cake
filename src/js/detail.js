@@ -57,6 +57,7 @@ require(["config"], () => {
                     localStorage.setItem("cart", JSON.stringify(cart));
                     location.href="/../html/cart.html";
                 })
+
                 // 加入购物车，点击“查看购物车”跳转页面
                 $("#detail").on("click","#cart", e  =>{
                         // 完成抛物线加购物车动画
@@ -77,10 +78,13 @@ require(["config"], () => {
                             header.calcCartNum(); //调用一次计算数量的方法
                         }
                     });
+
+                    //查看购物车
                     this.seeCart.fadeIn();
                     setTimeout(() => {
                     this.seeCart.fadeOut(); 
                     },1500);
+                    
                     //在加购按钮上，给当前的商品一个自定义属性，可以在按钮上取到id值
                     //列表页用自定义属性，详情页可以不用
                     // let id = $(this).attr("data-id");

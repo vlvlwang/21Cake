@@ -42,7 +42,7 @@
                 
             </div>
             <script type="text/html" id="list-template">
-                <ul class="pro-list">
+                <ul class="pro-list" id="pro-list">
                     {{each list item}}
                         <li>
                             <div class="pro-li-box">
@@ -56,13 +56,20 @@
                                     <a href="javascript:;">人气 ></a>
                                     <a href="javascript:;">生日 ></a>
                                 </div>
-                                <a class="pro-list-addcart" href="/../html/cart.html">
+                                <a class="pro-list-addcart" id="list-addCart" href="javascript:;" >
                                     <i></i>
                                     加入购物车
                                 </a>
                                 <div class="label">
                                     <img src="/../img/xinpin-icon.png" alt="">
                                 </div>
+                                <div class="seeCart" id="see-cart">
+                                    <p class="add-success">
+                                        <i></i>
+                                        成功添加购物车
+                                    </p>
+                                    <a href="/../html/cart.html">查看购物车</a>
+                                </div> 
                             </div>
                         </li>
                         {{/each}}

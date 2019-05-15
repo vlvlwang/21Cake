@@ -49,40 +49,19 @@ require(["config"], () => {
                 });
             }
 
-            //删除单条
-            // removeTr(){
-            //     let cart = localStorage.getItem("cart");
-            //     cart = JSON.parse(cart);
-            //     console.log(cart);
-            //     $("#tbody").on("click","#remove", e =>{
-            //         e = e || event;
-            //         let target = e.target || e.srcElement;
-            //         let tr = $(target).parent().parent().parent();
-            //         let id = Number($(tr).attr("data-id"));
-            //         // console.log(id);
-            //         let removeIndex = -1;
-            //         if(confirm("确定删除吗？")){
-            //             if(cart.some( (shop,i) =>{
-            //                 removeIndex = i;
-            //                 return shop.id = id;
-            //             })){
-            //             //id相等，就删除该条tr
-            //             tr.remove();
-            //                 // cart.filter(function(index){
-            //                 //     return !index ;
-            //                 // });
-                        
-            //             const newCart = [];
-            //              cart.map((item,index) =>{
-            //                 if(removeIndex === index){
-            //                     //当前相等，当前该条cart则为空
-            //                     console.log('删除的是',item)
-            //                 }else{
-            //                     newCart.push(item);
-            //                 }
-            //             })
-            //             console.log(newCart)// 存进localStorage
-            //             localStorage.setItem("cart", JSON.stringify(newCart));
+            // 数量加减(变化)
+            numChange(){
+                //减
+                $("#tbody").on("click", "#cut", e =>{
+                    let target = e.target;
+                    let num = $(target).next().val();
+                    // console.log(num);
+                    num--;
+                    if(num < 1){
+                        num = 1;
+                    } 
+                    console.log(num);
+                    
 
             //             // localStorage.clear();
 

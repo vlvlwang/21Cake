@@ -133,7 +133,6 @@ require(["config"], () => {
                             $("#tbody").remove();
                         }
                         this.calcAllMoney();
-
                     }
                     // let removeIndex = -1;
                     // if(confirm("确定删除吗？")){

@@ -40,7 +40,6 @@ require(["config"], () => {
                 let cart = localStorage.getItem("cart");
                 if(cart){
                     // cart有值，表示已经存过购物车了
-                    //判断有没有当前商品
                     //把字符串格式的cart转成json
                     //遍历cart ，查询有无相同的商品, some-只要有一个满足就行，every-每一个
                     cart = JSON.parse(cart);

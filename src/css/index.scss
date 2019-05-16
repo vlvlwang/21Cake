@@ -22,13 +22,17 @@ a{
     width: 50px;
     height: 50px;
     text-align: center;
-    line-height: 60px;
-    font-size: 35px;
+    line-height: 50px;
     border-radius:25px; 
-    background:url(/../img/top-icon1.png) no-repeat;
-    background-size: 100%;
+    background:#724228 url(/../img/回到顶部.png) no-repeat center center;
+    background-size: 55%;
     opacity: 0;
     transition: opacity .2s ease-out;
+    &:hover{
+    background:#523220 url(/../img/箭头-1.png) no-repeat center center;
+    background-size: 52%;
+    background-position-y: 10px;
+    }
 }
 main{
     width: 1140px;
@@ -274,12 +278,14 @@ main{
         ul{
             padding: 0 8px;
             margin-top: 20px;
-            margin-bottom: 0px;
+            margin-bottom: 20px;
             display: flex;
+            
             li{
                 width: 33.333333333333336%;
                 height: 330px;
                 text-align: center;
+                box-shadow: 0 0 6px 0 rgba(110, 110, 110, 0.2);
                 &:nth-child(1){
                     background: #eee2c8;
                     img{

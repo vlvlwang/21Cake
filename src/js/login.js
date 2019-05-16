@@ -18,19 +18,21 @@ require(["config"], () => {
                     //获取到登录数据
                     let username = this.loginName.val(),
                         password = this.password.val();
-                    //数据发送后台
-                    $.ajax({
-                        url : url.phpBaseUrl + "user/login.php",
-                        type : "post",
-                        data : {username,password},
-                        success : data => {
-                            console.log(data);
-                            if(data.res_code === 1){
-                               this.loginSucc(username);
-                            }
-                        },
-                        dataType : "json"
-                    })
+                        //数据发送后台
+                        $.ajax({
+                            url : url.phpBaseUrl + "user/login.php",
+                            type : "post",
+                            data : {username,password},
+                            success : data => {
+                                console.log(data);
+                                if(data.res_code === 1){
+                                   this.loginSucc(username);
+                                }else{
+                                    alert(data.res_message);
+                                }
+                            },
+                            dataType : "json"
+                        })
                 })
             }
             //登录成功后的方法

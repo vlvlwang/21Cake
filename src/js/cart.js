@@ -119,18 +119,17 @@ require(["config"], () => {
                     let id = Number($(tr).attr("data-id"));
                     if(confirm("确定删除商品信息吗？")){
                         tr.remove();
-                        cart.filter(function(shop){
+                        //用一个cart来接收过滤后的数据
+                        cart = cart.filter(function(shop){
                             return shop.id != id;
-                        });
-
+                        })
                         // 重新存进localStorage
                         localStorage.setItem("cart", JSON.stringify(cart));
                         header.calcCartNum();  //调用一次计算数量的方法
                         let num = Number($("#cart-num").html());  //取到刷新后的num值
                         if(num === 0){
-                            $("#list-empty").show();
-                            $("#pro-cart-head").hide()
-                            $("#tbody").remove();
+                            localStorage.removeItem("cart");
+                            this.init();
                         }
                         this.calcAllMoney();
                     }
@@ -172,7 +171,7 @@ require(["config"], () => {
                 // cart = JSON.parse(cart);
                 $("#detail").on("click", () =>{
                     if(confirm("确定清空购物车吗？")){
-                        // localStorage.removeItem(cart);
+                        // localStorage.removeItem('cart');
                         localStorage.clear();
                         this.init();
                         header.calcCartNum();  //调用一次计算数量的方法

@@ -10,11 +10,14 @@ ul,ol{
 a{
     text-decoration: none;
 }
-.back-top{
+#back-top.show{
+    opacity: 1;
+}
+#back-top{
     z-index: 100000;
     position: fixed;
-    bottom: 60px;
-    right: 5px;
+    bottom: 40px;
+    right: 40px;
     display: block;
     width: 50px;
     height: 50px;
@@ -22,8 +25,10 @@ a{
     line-height: 60px;
     font-size: 35px;
     border-radius:25px; 
-    background: url(../img/top-icon.png) no-repeat;
+    background:url(/../img/top-icon1.png) no-repeat;
     background-size: 100%;
+    opacity: 0;
+    transition: opacity .2s ease-out;
 }
 main{
     width: 1140px;
@@ -244,6 +249,76 @@ main{
                     //     }
                     // }
 
+                }
+            }
+        }
+    }
+    .active-list{
+        .acImg{
+            display: inline-block;
+            width: 542px;
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 15px 8px;
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+            background: url(/../img/active-bg.jpg);
+            background-size: auto 100%;
+            box-shadow: 0 0 6px 0 rgba(65, 65, 65, 0.2);
+        }
+    }
+    .matchImg{
+        margin-top: 45px;
+        ul{
+            padding: 0 8px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            display: flex;
+            li{
+                width: 33.333333333333336%;
+                height: 330px;
+                text-align: center;
+                &:nth-child(1){
+                    background: #eee2c8;
+                    img{
+                        margin-top: 85px;
+                        width: 50%;
+                    }
+                }
+                &:nth-child(2){
+                    background: #ddc59e;
+                    img{
+                        margin-top: 87px;
+                        width: 50%;
+                    }
+                }
+                &:nth-child(3){
+                    background: #eee2c8;
+                    img{
+                        margin-top: 26px;
+                        width: 50%;
+                    }
+                }
+                
+                .Text{
+                    margin-top: 40px;
+                    a{
+                        text-decoration: none;
+                        color: rgb(82, 50, 32);
+                        font-size: 17px;
+                        height: 25px;
+                        display: inline-block;
+                        border-bottom: 1px solid #523220;
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                    p{
+                        padding-top: 12px;
+                        font-size: 12px;
+                    }
                 }
             }
         }

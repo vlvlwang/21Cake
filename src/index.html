@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- 回到顶部 -->
-    <a class="back-top" href="#"></a>
+    <a class="back-top" id="back-top" href="javascript:;"></a>
     <!-- 头部 容器-->
     <header id="header"></header>
 
@@ -36,17 +36,17 @@
     <main class="container">
       <div class="nav-sort">
         <ul class="nav-list">
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
+          <li><a href="#xpList"></a></li>
+          <li><a href="#srList"></a></li>
+          <li><a href="#jhList"></a></li>
+          <li><a href="#hdList"></a></li>
         </ul>
       </div>
       <!-- 新品 -->
-      <div class="product-list">
+      <div class="product-list" id="xpList">
         <h4>新品<span>/ 专区</span></h4>
         <div class="new-bg">
-          <a href="#"></a>
+          <a href="/html/pro-class.html"></a>
         </div>
         <div class="list-box" >
       <!-- 商品列表 -->
@@ -55,10 +55,10 @@
         </div>
       </div>
       <!-- 生日 -->
-      <div class="product-list">
+      <div class="product-list" id="srList">
         <h4>生日<span>/ 专区</span></h4>
         <div class="fete-bg">
-          <a href="#"></a>
+          <a href="/html/pro-class.html"></a>
         </div>
         <div class="list-box" id="list-box">
       <!-- 商品列表 -->
@@ -67,19 +67,19 @@
           <ul>
             {{each list item}}
               <li>
-                  <a href="/html/detail.html"><img src="{{item.img}}" alt=""></a>
-                  <a href="/html/detail.html">
+                  <a href="/html/detail.html?id={{item.id}}"><img src="{{item.img}}" alt=""></a>
+                  <a href="/html/detail.html?id={{item.id}}">
                     <h6>{{item.title}}</h6>
                   </a>
-                  <a href="/html/detail.html">
+                  <a href="/html/detail.html?id={{item.id}}">
                     <p>{{item.text}}</p>
                   </a>
                   <div class="tag-list">
                     <span></span>
-                    <a href="">情侣 ></a>
-                    <a href="">人气 ></a>
-                    <a href="">生日 ></a>
-                    <a href="">结婚 ></a>
+                    <a href="javascript:;">情侣 ></a>
+                    <a href="javascript:;">人气 ></a>
+                    <a href="javascript:;">生日 ></a>
+                    <a href="javascript:;">结婚 ></a>
                   </div>
                   <div class="cart-info">
                     <span>￥{{item.price}}/2.0磅</span>
@@ -93,10 +93,10 @@
         </script>
       </div>
       <!-- 聚会 -->
-      <div class="product-list">
+      <div class="product-list" id="jhList">
         <h4>聚会<span>/ 专区</span></h4>
         <div class="party-bg">
-          <a href="#"></a>
+          <a href="/html/pro-class.html"></a>
         </div>
         <div class="list-box">
       <!-- 商品列表 -->
@@ -111,10 +111,10 @@
                   </a>
                   <div class="tag-list">
                     <span></span>
-                    <a href="">情侣 ></a>
-                    <a href="">人气 ></a>
-                    <a href="">生日 ></a>
-                    <a href="">结婚 ></a>
+                    <a href="javascript:;">情侣 ></a>
+                    <a href="javascript:;">人气 ></a>
+                    <a href="javascript:;">生日 ></a>
+                    <a href="javascript:;">结婚 ></a>
                   </div>
                   <div class="cart-info">
                     <span>￥298.00/2.0磅</span>
@@ -133,10 +133,10 @@
                     </a>
                     <div class="tag-list">
                       <span></span>
-                      <a href="">情侣 ></a>
-                      <a href="">人气 ></a>
-                      <a href="">生日 ></a>
-                      <a href="">结婚 ></a>
+                      <a href="javascript:;">情侣 ></a>
+                      <a href="javascript:;">人气 ></a>
+                      <a href="javascript:;">生日 ></a>
+                      <a href="javascript:;">结婚 ></a>
                     </div>
                     <div class="cart-info">
                       <span>￥298.00/2.0磅</span>
@@ -155,10 +155,10 @@
                   </a>
                   <div class="tag-list">
                     <span></span>
-                    <a href="">情侣 ></a>
-                    <a href="">人气 ></a>
-                    <a href="">生日 ></a>
-                    <a href="">结婚 ></a>
+                    <a href="javascript:;">情侣 ></a>
+                    <a href="javascript:;">人气 ></a>
+                    <a href="javascript:;">生日 ></a>
+                    <a href="javascript:;">结婚 ></a>
                   </div>
                   <div class="cart-info">
                     <span>￥298.00/2.0磅</span>
@@ -176,10 +176,10 @@
                   </a>
                   <div class="tag-list">
                     <span></span>
-                    <a href="">情侣 ></a>
-                    <a href="">人气 ></a>
-                    <a href="">生日 ></a>
-                    <a href="">结婚 ></a>
+                    <a href="javascript:;">情侣 ></a>
+                    <a href="javascript:;">人气 ></a>
+                    <a href="javascript:;">生日 ></a>
+                    <a href="javascript:;">结婚 ></a>
                   </div>
                   <div class="cart-info">
                     <span>￥298.00/2.0磅</span>
@@ -195,7 +195,7 @@
       <div class="product-list">
         <h4>人气<span>/ 专区</span></h4>
         <div class="pop-bg">
-          <a href="#"></a>
+          <a href="/html/pro-class.html"></a>
         </div>
         <div class="list-box">
       <!-- 商品列表 -->
@@ -210,10 +210,10 @@
                 </a>
                 <div class="tag-list">
                   <span></span>
-                  <a href="">情侣 ></a>
-                  <a href="">人气 ></a>
-                  <a href="">生日 ></a>
-                  <a href="">结婚 ></a>
+                  <a href="javascript:;">情侣 ></a>
+                  <a href="javascript:;">人气 ></a>
+                  <a href="javascript:;">生日 ></a>
+                  <a href="javascript:;">结婚 ></a>
                 </div>
                 <div class="cart-info">
                   <span>￥298.00/2.0磅</span>
@@ -232,10 +232,10 @@
                   </a>
                   <div class="tag-list">
                     <span></span>
-                    <a href="">情侣 ></a>
-                    <a href="">人气 ></a>
-                    <a href="">生日 ></a>
-                    <a href="">结婚 ></a>
+                    <a href="javascript:;">情侣 ></a>
+                    <a href="javascript:;">人气 ></a>
+                    <a href="javascript:;">生日 ></a>
+                    <a href="javascript:;">结婚 ></a>
                   </div>
                   <div class="cart-info">
                     <span>￥298.00/2.0磅</span>
@@ -254,10 +254,10 @@
                   </a>
                   <div class="tag-list">
                     <span></span>
-                    <a href="">情侣 ></a>
-                    <a href="">人气 ></a>
-                    <a href="">生日 ></a>
-                    <a href="">结婚 ></a>
+                    <a href="javascript:;javascript:;">情侣 ></a>
+                    <a href="javascript:;javascript:;">人气 ></a>
+                    <a href="javascript:;javascript:;">生日 ></a>
+                    <a href="javascript:;javascript:;">结婚 ></a>
                   </div>
                   <div class="cart-info">
                     <span>￥298.00/2.0磅</span>
@@ -276,10 +276,10 @@
                     </a>
                     <div class="tag-list">
                       <span></span>
-                      <a href="">情侣 ></a>
-                      <a href="">人气 ></a>
-                      <a href="">生日 ></a>
-                      <a href="">结婚 ></a>
+                      <a href="javascript:;">情侣 ></a>
+                      <a href="javascript:;">人气 ></a>
+                      <a href="javascript:;">生日 ></a>
+                      <a href="javascript:;">结婚 ></a>
                     </div>
                     <div class="cart-info">
                       <span>￥298.00/2.0磅</span>
@@ -291,7 +291,36 @@
           </ul>
         </div>
       </div>
-
+      <div class="active-list">
+        <h4>活动门<span>/ 是被吸引了吧</span></h4>
+        <a class="acImg" href=""></a>
+      </div>
+      <div class="matchImg">
+        <h4>廿一客<span>/ 了解更多</span></h4>
+        <ul>
+          <li>
+            <img src="/img/ca-afternoontea.png" alt="">
+            <div class="Text">
+              <a href="javascript:;">AFTERNOON TEA<span> 下午茶</span></a>
+              <p>“一杯咖啡，一份甜点，一抹偷不走的时光”。</p>
+            </div>
+          </li>
+          <li>
+              <img src="/img/ca-cake.png" alt="">
+              <div class="Text">
+                <a href="javascript:;">CAKE<span> 蛋糕</span></a>
+                <p>“只有国王才有资格拥有的，享受众人给予的祝福”。</p>
+              </div>
+          </li>
+          <li>
+              <img src="/img/ca-freehand.png" alt="">
+              <div class="Text">
+                <a href="javascript:;">SOUVENIR<span> 手信</span></a>
+                <p>“不在于物贵，一情意，一真诚”。</p>
+              </div>
+          </li>
+        </ul>
+      </div>
     </main>
     <footer id="footer" class="rela"></footer>
     <script src="/libs/requirejs/require.js" data-main="/js/index"></script>

@@ -1,0 +1,192 @@
+@import "../libs/bootstrap/css/bootstrap.min.css";
+@import "module/base.scss";
+@import "module/footer.scss";
+@import "module/header.scss";
+*{
+    margin: 0;
+    padding: 0;
+}
+ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+$width:1200px;
+$fontColor: #684029;
+.content-box{
+    width: $width;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+    .pro-list-content{
+        .pro-class-banner{
+            margin-top: 80px;
+            height: 400px;
+            background: url(/../img/新品-banner.jpg) center center;
+        }
+        .pro-class-title{
+            h2{
+                font-size: 24px;
+                text-align: center;
+                margin: 50px 0;
+                font-weight: normal;
+                i{
+                    display: block;
+                    width: 28px;
+                    height: 2px;
+                    background: #E6C5B8;
+                    margin: 8px auto 14px;
+                }
+            }
+        }
+        .pro-list-box{
+            
+            .pro-list{
+                overflow: hidden;
+                li{
+                    width: 264px;
+                    height: 364px;
+                    float: left;
+                    padding: 0 18px;
+                    margin: 10px 18px;
+                    position: relative;
+                    overflow: hidden;
+                    .pro-li-box{
+                        width: 228px;
+                        height: 364px;
+                        position: relative;
+                        margin: 0 auto;
+                        text-align: center;
+                        .goods-list{
+                            display: block;
+                            width: 228px;
+                            height: 292px;
+                            text-align: center;
+                            &:hover h6{
+                                color: #BB9772;
+                            }
+                            img{
+                                width: 228px;
+                                height: 246px;
+                            }
+                            text-decoration: none;
+                            color: #684029;
+                            cursor: pointer;
+                            text-align: center;
+                            h6{
+                                font-size: 13px;
+                                line-height: 20px;
+                                font-weight: normal;
+                                margin-bottom: 0px; 
+                            }
+                            span{
+                                display: block;
+                                color: #BB9772;
+                                line-height: 18px;
+                                margin-top: 5px;
+                                font-size: 13px;
+                            }
+                        }
+                        .tag-list{
+                            a{
+                                text-decoration: none;
+                                display: inline-block;
+                                border: 1px solid #D5BFA7;
+                                border-radius: 100px;
+                                padding: 1px 6px 0 8px;
+                                color: #D5BFA7;
+                                margin: 14px 4px;
+                                font-size: 12px;
+                            }
+                        }
+                        .pro-list-addcart{
+                            text-decoration: none;
+                            color:$fontColor;
+                            position: absolute;
+                            bottom: 5px;
+                            display: inline-block;
+                            width: 107px;
+                            height: 22px;
+                            left: 60px;
+                            line-height: 24px;
+                            margin-top: 10px;
+                            background: 0 0;
+                            font-size: 13px;
+                            &:hover{
+                                color: #BB9772;
+                            }
+                            &:hover i{
+                                background: url(/../img/icon.png) -253px -76px no-repeat;
+                                background-size: 310px 120px;
+                            }
+                            i{
+                                display: inline-block;
+                                vertical-align: -5px;
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 4px;
+                                background: url(/../img/icon.png) -218px -44px no-repeat;
+                                background-size: 310px 120px;                             
+                            }
+                        }
+                        .label{
+                            width: 228px;
+                            height: 26px;
+                            text-align: left;
+                            position: absolute;
+                            left: 0;
+                            top: 15px;
+                            width: 100%;
+
+                            img{
+                                width: 65px;
+                                height: 23px;
+                            }
+                        }
+                        .seeCart{
+                            position: relative;
+                            width: 228px;
+                            height: 118px;
+                            top: -94px;
+                            left: 0px;
+                            background: rgb(245, 245, 245);
+                            display: none;
+                            z-index: 10000;
+                            .add-success{
+                                width: 180px;
+                                color: #BB9772;
+                                font-size: 14px;
+                                line-height: 20px;
+                                padding-top: 28px;
+                                text-align: end;
+                                i{
+                                    height: 20px;
+                                    width: 24px;
+                                    background: url(/../img/icon.png) -230px -33px no-repeat;
+                                    background-size: 270px 98px;
+                                    margin-right: 4px;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                }
+                            }
+                            a{
+                                text-decoration: none;
+                                color: #fff;
+                                background: #684029;
+                                display: block;
+                                height: 34px;
+                                width: 160px;
+                                line-height: 34px;
+                                text-align: center;
+                                margin: 15px auto 0;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

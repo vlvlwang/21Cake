@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>pro-list</title>
-    <link rel="stylesheet" href="/../css/product-list.css">
+    <title>pro-class</title>
+    <link rel="stylesheet" href="/../css/pro-class.css">
 </head>
 <body>
     <!-- 头部容器 -->
@@ -13,30 +13,12 @@
     <!-- 中间列表 -->
     <div class="content-box">
         <div class="pro-list-content">
-            <div class="pro-list-nav">
-                <dl class="sort-list">
-                    <dt>分类：</dt>
-                    <dd>全部分类</dd>
-                    <dd>蛋糕</dd>
-                    <dd>冰淇淋</dd>
-                    <dd>咖啡下午茶</dd>
-                    <dd>常温蛋糕</dd>
-                    <dd>设计师礼品</dd>
-                    <dd>面包</dd>
-                </dl>
-                <dl class="flavor-list">
-                    <dt>口味：</dt>
-                    <dd>全部口味</dd>
-                    <dd>乳脂奶油</dd>
-                    <dd>慕斯</dd>
-                    <dd>乳酪</dd>
-                    <dd>巧克力</dd>
-                    <dd>坚果</dd>
-                    <dd>水果</dd>
-                    <dd>含酒</dd>
-                    <dd>咖啡</dd>
-                    <dd>冰淇淋</dd>
-                </dl>
+            <div class="pro-class-banner"></div>
+            <div class="pro-class-title">
+                <h2>
+                    新品
+                    <i></i>
+                </h2>
             </div>
             <div class="pro-list-box" id="pro-list-box"></div>
             <script type="text/html" id="list-template">
@@ -50,14 +32,17 @@
                                     <span>￥{{item.price}}/2.0磅</span>
                                 </a>
                                 <div class="tag-list">
-                                    <a href="javascript:;">情侣 ></a>
-                                    <a href="javascript:;">人气 ></a>
-                                    <a href="javascript:;">生日 ></a>
+                                    <a href="javascript:;">新品 ></a>
+                                    <a href="javascript:;">吐司 ></a>
+                                    <!-- <a href="javascript:;">生日 ></a> -->
                                 </div>
-                                <a class="pro-list-addcart" id="list-addCart" data-id="{{item.id}}" href="javascript:;" >
+                                <a class="pro-list-addcart" id="list-addCart" href="javascript:;" >
                                     <i></i>
                                     加入购物车
                                 </a>
+                                <div class="label">
+                                    <img src="/../img/xinpin-icon.png" alt="">
+                                </div>
                                 <div class="seeCart" id="see-cart">
                                     <p class="add-success">
                                         <i></i>
@@ -65,9 +50,6 @@
                                     </p>
                                     <a href="/../html/cart.html">查看购物车</a>
                                 </div> 
-                                <div class="label">
-                                    <img src="/../img/xinpin-icon.png" alt="">
-                                </div>
                             </div>
                         </li>
                         {{/each}}
@@ -77,6 +59,6 @@
     </div>
     <!-- 尾部容器 -->
     <footer id="footer"></footer>
-    <script src="/libs/requirejs/require.js" data-main="/js/product-list"></script>
+    <script src="/libs/requirejs/require.js" data-main="/js/pro-class"></script>
 </body>
 </html>

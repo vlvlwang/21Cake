@@ -2,6 +2,12 @@
 
 1.首页类型请求
 
+url : http://rap2api.taobao.org/app/mock/168141/
+
+method : get
+
+data : {···}
+
 
 2.列表页接口
 

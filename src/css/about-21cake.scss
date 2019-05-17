@@ -135,7 +135,7 @@ $fontColor: #684029;
                 }
             }
             .common{
-                height: 715px;
+                height: 700px;
 
                 .common-title{
                     background: url(../img/common.png) no-repeat 0 40px;
@@ -181,7 +181,69 @@ $fontColor: #684029;
                     }
                 }
             }
-            
+            .made{
+                .made-title{
+                    background: url(/../img/ways-1.png) no-repeat center center;
+                }
+                .city{
+                    display: block;
+                    height: 25px;
+                    width: 75px;
+                    padding-right: 5px;
+                    border: 1px solid #73472E;
+                    line-height: 25px;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #73472E;
+                    cursor: pointer;
+                    margin: 30px auto 10px;
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                    }
+                    i{
+                        position: relative;
+                        left: 25px;
+                        bottom: 25px;
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        margin-top: 7px;
+                        background: url(/../img/icon.png) no-repeat 2px -56px;
+                        background-size: 365px 135px;
+                    }
+                }
+                ul{
+                    display: none;
+                    position: absolute;
+                    left: 47.5%;
+                    min-width: 60px;
+                    background-color:#fdfdfd;
+                    border-radius:2px; 
+                    box-shadow: 0 3px 4px rgba(53, 44, 35, 0.2);
+                    li{
+                        line-height: 30px;
+                        text-align: center;  
+                        a{
+                            text-decoration: none;
+                            color: #73472E;
+                            &:hover{
+                                color:  #D5BFA7;
+                            }
+                        }
+                    }
+                }
+                .callText{
+                    margin-top: 15px;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #73472E;
+                    line-height: 25px;
+                    padding-bottom: 70px;
+                    border-bottom: 2px #A68A7A dashed;
+                }
+            }
         }
     }
 }

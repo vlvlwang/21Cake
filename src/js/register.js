@@ -26,6 +26,8 @@ require(["config"], () => {
                         confirm("用户名不能数字、下划线开头,长度在2-20位之间！");
                     }else if(!pwdPattern.test(password)){
                         confirm("密码必须字母开头，长度在6-15位之间");
+                    }else if(!$("#remember").prop("checked")){
+                        confirm("请阅读注册相关协议及隐私政策")
                     }else{
                         //商量接口
                         $.ajax({
@@ -36,6 +38,7 @@ require(["config"], () => {
                             //注册成功，跳转登录页
                                 if(data.res_code === 1){
                                     alert(data.res_message + "，即将跳转登录页");
+                                    $.cookie("name",username,{path:"/"}); //取到用户名，存到根目录
                                     location.href = "login.html";
                                 }
                             },

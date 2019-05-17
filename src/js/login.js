@@ -12,6 +12,17 @@ require(["config"], () => {
                 this.btn = $("#login-btn");
                 this.remember = $("#remember");
                 this.bindEvents();
+                this.init();
+            }
+            //获取注册用户名
+            init(){
+                //先把登录页用户名置空
+                $("#loginName").val("");
+                //用一个变量来接收存在根目录下的用户名（cookie）
+                let loginInfo = $.cookie("name");
+                console.log(loginInfo);
+                //把接收到的用户名给登录页input的value
+                $("#loginName").val(loginInfo);
             }
             bindEvents(){
                 this.btn.on("click" , () =>{

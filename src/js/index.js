@@ -54,7 +54,7 @@ require(["config"], () => {
 
                     autoplay:true,//等同于以下设置,自动轮播
                     autoplay: {
-                        delay: 1000,
+                        delay: 3000,
                         stopOnLastSlide: false,
                         disableOnInteraction: false,
                         },
@@ -66,11 +66,10 @@ require(["config"], () => {
                       bulletElement : 'customs',
                     },
                     // 如果需要前进后退按钮
-                    navigation: {
-                      nextEl: '.swiper-button-next',
-                      prevEl: '.swiper-button-prev',
-                      
-                    },
+                    // navigation: {
+                    //   nextEl: '.swiper-button-next',
+                    //   prevEl: '.swiper-button-prev',
+                    // },
                   });
                   mySwiper.el.onmouseover = function(){ 
                       //鼠标放上暂停轮播

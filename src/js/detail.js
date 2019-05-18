@@ -80,9 +80,10 @@ require(["config"], () => {
                     });
 
                     //查看购物车
-                    this.seeCart.fadeIn();
+                   
+                    $("#see-cart").fadeIn();
                     setTimeout(() => {
-                    this.seeCart.fadeOut(); 
+                    $("#see-cart").fadeOut(); 
                     },1500);
                     
                     //在加购按钮上，给当前的商品一个自定义属性，可以在按钮上取到id值
